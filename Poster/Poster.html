@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+
+
+
+<title>Using Civic Technology to Monitor Freedom of Information in New Jersey</title>
+
+<script src="Poster_files/header-attrs-2.7/header-attrs.js"></script>
+
+
+
+
+<style>
+@page {
+size: 45in 38in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 45px;
+width: 45in;
+height: 38in;
+padding: 0;
+text-align: justify;
+font-family: Palatino;
+}
+.poster_wrap {
+width: 45in;
+height: 38in;
+padding: 0cm;
+}
+.title_container {
+width: 45in;
+height: calc(38in * 0.15);
+overflow: hidden;
+background-color: #0b4545;
+border: 0 solid #0b4545;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Palatino;
+}
+/* unvisited link */
+a:link {
+color: #cc0000;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #cc0000;
+}
+
+/* mouse over link */
+a:hover {
+color: #cc0000;
+}
+
+/* selected link */
+a:active {
+color: #cc0000;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #0b4545;
+-moz-column-rule-color: #0b4545;
+column-rule-color: #0b4545;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 75pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(45in + 0 + 0);
+height: calc(38in * 0.83);
+padding-top: calc(38in * 0.005);
+padding-bottom: calc(38in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #ffffff;
+font-size: 50pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 65pt;
+border: 2mm solid #0b4545;
+background-color: #0b4545;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #00808024;
+color: #0b4545;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Using Civic Technology to Monitor Freedom of Information in New Jersey</h1>
+<h3 id="author">Gavin C. Rozzi<sup>1, <a class="orcid" href="https://orcid.org/0000-0002-9969-8175"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup></h3><br>
+<h5 id="affiliation"><sup>1</sup> Rutgers Urban &amp; Civic Informatics Lab, Edward J. Bloustein School of Planning &amp; Public Policy, Rutgers, The State University of New Jersey</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Freedom of information (FOI) laws provide an important mechanism for citizens and researchers to study public policy issues &amp; evaluate government transparency. This poster presents the <code>OPRAmachine</code> platform and research dataset, which is the first U.S.-based deployment of the open-source <a href="https://alavteli.org">Alaveteli</a> software for automating the FOI request process and collecting data on FOI requests submitted to authorities <span class="citation">(mySociety Foundation, Inc. n.d.)</span>. Through the use of the website, data on over 20,000 requests made under New Jersey’s FOI law, the Open Public Records Act (OPRA), has been collected since 2017 until the present <span class="citation">(Rozzi 2020)</span>.</p>
+<p>The Alaveteli platform has already been deployed throughout many countries at the national level, including the UK-based <a href="https://www.whatdotheyknow.com">WhatDoTheyKnow</a>. OPRAmachine builds upon past work in this field by specificically focusing on a state &amp; local government in New Jersey and its political subdivisions and fills a gap left by a lack of data collection by official governmental sources to enable new research.</p>
+</div>
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<p>The Alaveteli platform was customized to meet the legislative parameters of New Jersey’s FOI law and a database of 1256 public authorities was built by compiling information from multiple open-access data sources.</p>
+<p>To collect the research dataset, users of the <a href="https://opramachine.com">OPRAmachine website</a> were permitted to fill out a form describing the records they seek. Prior to submitting their request, users were required to consent to the publication of their request and collection of data.</p>
+<p>When a response is received, the user receives a notification and data is logged describing the status of the request and timeframe between when the request was sent and when a response was received from public authorities. Upon receiving a response from a public authority, the user was prompted to answer survey questions describing the nature of the response they received from public officials.</p>
+<p>A high-level overview of trends in this dataset is also presented in an <a href="https://rozzi.shinyapps.io/nj-opra-dashboard/">interactive dashboard.</a>. Additionally, a <a href="requests.opramachine.com:8000/__docs__/">JSON REST API</a> is available for obtaining the aggregated data by county.</p>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<p>Using the collected data, basic descriptive statistics were calculated to show high-level trends in the implementation of New Jersey’s freedom of information law and the research dataset has been made available to researchers and the public via several sources. This dataset can be exploited for further evaluation of the effectiveness of the law in obtaining access to public documents and information. The law provides for a 7 business deadline for the public authority’s initial response to the requests. The median response time was calculated for each county by aggregating all requests sent to public authorities within its borders.</p>
+<center>
+<strong>Figure 1 - Median FOI response time by county </strong>
+<img src="median_response.jpg" alt="Fig. 1 Median FOI request response time by county" />
+</center>
+<p>There was variance among New Jersey’s 21 counties with respect to the timeliness of their responses to requesters. Some responded prior to the statutory 7 business day deadline, whereas a smaller number of counties fell either below or above that threshold.</p>
+<p>Given the nature of the data collection process, there was not an even distribution of requests across all counties, so every county did not have the same sample size of requests. This is anticipated to improve over time as additional requests are submitted by users.</p>
+<center>
+<strong>Figure 2 - Total number of requests by county</strong>
+<img src="total_requests.jpg" alt="Fig. 2 Total requests by county" />
+</center>
+</div>
+<div id="future-work" class="section level1">
+<h1>Future Work</h1>
+<p>This dataset enables further analysis of the public policies governing access to government information in New Jersey. The COVID-19 pandemic has seen several sweeping policy changes enacted via both legislative and executive action that have reduced the obligations of public authorities to respond to requests with the original 7 business day deadline, so future work in this area will be very timely in evaluating the full impact of COVID-19 on access to information in the state.</p>
+<p>In addition to the work described in this poster and accompanying paper, multiple other researchers across disciplines have utilized the platform to submit records requests to collecte data in support of their research. The data that they have collected using <code>OPRAmachine</code> will be used to support research into various public policy &amp; criminal justice issues in New Jersey, with that work to be published in scholarly journals and other forums in the future.</p>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<ol style="list-style-type: decimal">
+<li><p>The <code>OPRAmachine</code> dataset contains metadata tracking the status of over 20,000 public records requests submitted to public authorities in New Jersey, USA. The uniform manner in which the requests were submitted makes them suitable for statewide policy evaluation &amp; text mining.</p></li>
+<li><p>In addition to allowing individual users to submit public records requests that are contributed to the dataset (with their consent), other researchers have adopted the platform, enabling researchers to take advantage of New Jersey’s freedom of information law to collect additional data in support of research in the areas of criminal justice reform &amp; public policy evaluation.</p></li>
+<li><p>Delayed &amp; denied access to government information during COVID-19 continues to be a significant concern for researchers and the public <span class="citation">(Barchenger 2020)</span>. This dataset can shed additional light on the impact of COVID-19 on timely access to government information by providing a quantifiable measure of FOI law compliance &amp; data about requested information.</p></li>
+<li><p>This projects was the first to implement the open-source <a href="https://alaveteli.org">Alaveteli</a> open-source platform for managing public records requests. Alaveteli has been deployed in multiple countries throughout Europe. <code>OPRAmachine</code> was the first to implement this platform in the United States. A key difference between this project and others is that it targets a single U.S. state rather than an entire country.</p></li>
+</ol>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Barchenger2020" class="csl-entry">
+Barchenger, Stacey. 2020. <span>“<span class="nocase">NJ coronavirus: State keeps records secret about COVID-19 response</span>.”</span> <a href="https://www.app.com/story/news/new-jersey/2020/05/17/nj-coronavirus-state-keeps-records-secret-covid-19-response/3086578001/">https://www.app.com/story/news/new-jersey/2020/05/17/nj-coronavirus-state-keeps-records-secret-covid-19-response/3086578001/</a>.
+</div>
+<div id="ref-MySocietyFoundationInc" class="csl-entry">
+mySociety Foundation, Inc. n.d. <span>“<span class="nocase">Deployments | Alaveteli | mySociety</span>.”</span> Accessed June 21, 2020. <a href="https://alaveteli.org/deployments/">https://alaveteli.org/deployments/</a>.
+</div>
+<div id="ref-ROZZI2020106265" class="csl-entry">
+Rozzi, Gavin C. 2020. <span>“The First Statewide, Open Access Dataset Tracking Public Records Requests in New Jersey.”</span> <em>Data in Brief</em> 32: 106265. https://doi.org/<a href="https://doi.org/10.1016/j.dib.2020.106265">https://doi.org/10.1016/j.dib.2020.106265</a>.
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
